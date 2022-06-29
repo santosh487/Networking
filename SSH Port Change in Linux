@@ -4,12 +4,12 @@ uncomment port
 sudo vim /etc/services
 
 sudo ufw allow ssh
-
 sudo ufw status
 
 sudo systemctl restart sshd
 
-Local Port Forwarding
-
+#Local Port Forwarding
 ssh -L 8888(local port):192.168.1.3(public ssh server):8080(public port) 44.11.22.33(Local Server)
+
+#Remote Port Forwarding
 ssh -R 8888(Public Port):10.0.0.3(Remote server):8080(Remote Port) 44.11.22.33(Public ssh server)
